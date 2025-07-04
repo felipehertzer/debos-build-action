@@ -20,7 +20,7 @@ runs:
   using: "composite"
   steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: radxa/debos-radxa
     - name: Convert flavor to variant
@@ -40,7 +40,7 @@ runs:
         -b ${{ inputs.board }} -m ${{ inputs.distro }} -v ${{ env.variant }}
     - name: Upload artifacts
       if: inputs.artifacts == 'true'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ inputs.board }}_${{ inputs.distro }}_${{ env.variant }}
         path: ./output/*.img.*
