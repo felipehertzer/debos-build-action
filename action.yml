@@ -22,7 +22,7 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        repository: radxa/debos-radxa
+        repository: felipehertzer/debos-radxa
     - name: Convert flavor to variant
       shell: bash
       run: |
